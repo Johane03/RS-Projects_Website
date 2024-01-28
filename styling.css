@@ -10,9 +10,9 @@
 
 :root{
     --bg-colour: #fff;
-    --second-bg-colour: #202020;
+    --second-bg-colour: #ff0000;
     --text-colour: #2a2a2a;
-    --second-text-colour: #ccc;
+    --second-text-colour: #fff;
     --big-font: 5rem;
     --h1-font: 3rem;
     --p-font: 1.1rem;
@@ -68,7 +68,8 @@ nav{
 }
 
 .navList a:hover{
-    color: red
+    color: red;
+    text-shadow: 1px 1px 2px red, 0 0 5px black, 0 0 5px maroon;
 }
 
 section {
@@ -99,16 +100,28 @@ p {
     background-color: #555;
 }
 
-#services ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
+#services{
 }
 
-#services ul li {
-    margin-right: 20px;
+.gridContainer{
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    grid-auto-rows: 100px;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+.gridItem {
+    border: 2px solid red;
+    border-radius: 5px;
+    padding: 10px;
+    background-color:var(--second-bg-colour);
+    color: var(--second-text-colour);
+    box-shadow: 10px 10px 5px #6e6e6e;
+}
+
+.gridItem:hover {
+
 }
 
 #projects {
