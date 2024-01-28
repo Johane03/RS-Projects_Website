@@ -1,7 +1,26 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
+*{
     padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --bg-colour: #fff;
+    --second-bg-colour: #202020;
+    --text-colour: #2a2a2a;
+    --second-text-colour: #ccc;
+    --big-font: 5rem;
+    --h1-font: 3rem;
+    --p-font: 1.1rem;
+}
+
+body{
+    background: var(--bg-colour);
+    color: var(--text-colour);
 }
 
 .container{
@@ -9,7 +28,7 @@ body {
 }
 
 header {
-    color: #fff;
+    color: var(--second-text-colour);
     padding: 5px;
     display: flex;
     align-items: center;
@@ -157,11 +176,7 @@ footer {
 }
 
 .home{
-    /*background-image: url(background.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 50vh;*/
+    padding: 100px;
 }
 
 #logo{
