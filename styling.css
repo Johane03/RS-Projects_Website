@@ -21,6 +21,8 @@
 body{
     background: var(--bg-colour);
     color: var(--text-colour);
+    /*background-image: url(background.jpg);*/
+    height: 100px;
 }
 
 .container{
@@ -100,30 +102,79 @@ p {
     background-color: #555;
 }
 
+/* Services Section */
 #services{
+}
+
+.gridContainer p{
+    padding: 20px;
 }
 
 .gridContainer{
     display: grid; 
-    grid-template-columns: repeat(3, 1fr); 
-    grid-auto-rows: 100px;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    grid-template-rows: repeat(3, 1fr); /* 3 equal rows */
     gap: 20px;
     padding-top: 20px;
 }
 
-.gridItem {
-    border: 2px solid red;
+.flip-card {
+    border: 2px solid transparent;
+    background-color: #ffffff;
     border-radius: 5px;
     padding: 10px;
-    background-color:var(--second-bg-colour);
-    color: var(--second-text-colour);
+    width: 100%;
+    height: 300px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Flip the card on hover */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Define the front and back sides of the card */
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+.flip-card-front{
+    text-align: center;
+    align-content: center;
     box-shadow: 10px 10px 5px #6e6e6e;
+    border-radius: 5px;
 }
 
-.gridItem:hover {
-
+.flip-card-back{
+    color: var(--second-text-colour);
+    transform: rotateY(180deg);
+    background-color: var(--second-bg-colour);
+    box-shadow: -10px -10px 5px #6e6e6e;
+    border-radius: 5px;
+    padding-top: 20px;
 }
 
+.flip-card-img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    opacity: 0.7;
+}
+
+/* Projects Section */
 #projects {
     display: flex;
     justify-content: center;
@@ -156,6 +207,7 @@ p {
     margin-bottom: 10px;
 }
 
+/* Contact Section */
 #contact form {
     display: flex;
     flex-direction: column;
