@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RS Projects</title>
     <link rel="stylesheet" href="styling.css">
+    <script type="text/javascript" src="script.js"></script>
 </head>
-<body class="container">
+<body>
 
-    <img src="RS-Logo_Background.png" alt="Logo Background" id="logoBackground">
+    <img src="images/RS-Logo_Background.png" alt="Logo Background" id="logoBackground">
 
+    <!--Header Section-->
     <header>
         <nav>
             <ul class="navList">
@@ -19,24 +21,28 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <img src="RS_Logo.png" alt="Logo" id="logo">
+        <img src="images/RS_Logo.png" alt="Logo" id="logo">
     </header>
     
-    <section class="home">
+    <!--Home Section-->
+    <section id="home">
         <h1>Welcome to RS Projects</h1>
         <p>Quality & Efficiency Services Beyond Expectations.</p>
         <a href="#contact" class="btn">Get a Quote</a>
     </section>
     
+    <!--Services Section-->
     <section id="services">
-        <h2>Our Services</h2>
+        <h2>
+           <span>Our Services</span> 
+        </h2>
         <article class="gridContainer">
 
             <!--Lifting Service-->
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
-                        <img src="lifting.jpg" alt="lifting" class="flip-card-img">
+                        <img src="images/lifting.jpg" alt="lifting" class="flip-card-img">
                     </div>
                     <div class="flip-card-back">
                         <h3>Lifting</h3>
@@ -49,7 +55,7 @@
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
-                        <img src="rigging.jpg" alt="rigging" class="flip-card-img">
+                        <img src="images/rigging.jpg" alt="rigging" class="flip-card-img">
                     </div>
                     <div class="flip-card-back">
                         <h3>Rigging</h3>
@@ -62,7 +68,7 @@
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
-                        <img src="transporting.jpg" alt="transport" class="flip-card-img">
+                        <img src="images/transporting.jpg" alt="transport" class="flip-card-img">
                     </div>
                     <div class="flip-card-back">
                         <h3>Transport</h3>
@@ -75,7 +81,7 @@
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
-                        <img src="mechanical.jpg" alt="mechanical" class="flip-card-img">
+                        <img src="images/mechanical.jpg" alt="mechanical" class="flip-card-img">
                     </div>
                     <div class="flip-card-back">
                         <h3>Mechanical</h3>
@@ -88,7 +94,7 @@
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
-                        <img src="technical.jpg" alt="technical" class="flip-card-img">
+                        <img src="images/technical.jpg" alt="technical" class="flip-card-img">
                     </div>
                     <div class="flip-card-back">
                         <h3>Technical</h3>
@@ -101,7 +107,7 @@
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
-                        <img src="structural.jpg" alt="structural" class="flip-card-img">
+                        <img src="images/structural.jpg" alt="structural" class="flip-card-img">
                     </div>
                     <div class="flip-card-back">
                         <h3>Structural</h3>
@@ -114,7 +120,7 @@
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
-                        <img src="consulting.jpg" alt="consulting" class="flip-card-img">
+                        <img src="images/consulting.jpg" alt="consulting" class="flip-card-img">
                     </div>
                     <div class="flip-card-back">
                         <h3>Consulting</h3>
@@ -127,7 +133,7 @@
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
-                        <img src="" alt="sourcing" class="flip-card-img">
+                        <img src="images/sourcing.jpg" alt="sourcing" class="flip-card-img">
                     </div>
                     <div class="flip-card-back">
                         <h3>Sourcing</h3>
@@ -140,7 +146,7 @@
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
-                        <img src="" alt="HSE" class="flip-card-img">
+                        <img src="images/HSE.jpg" alt="HSE" class="flip-card-img">
                     </div>
                     <div class="flip-card-back">
                         <h3>HSE</h3>
@@ -152,7 +158,8 @@
         </article>
     </section>
     
-    <section id="projects">
+    <!--Projects Section-->
+    <!--section id="projects">
         <h2>Our Projects</h2>
         <div class="project">
             <img src="project1.jpg" alt="Project 1">
@@ -164,10 +171,13 @@
             <h3>Project 2</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
-    </section>
+    </section-->
     
+    <!--Contact Section-->
     <section id="contact">
-        <h2>Contact Us</h2>
+        <h2>
+            <span>Contact Us</span>
+        </h2>
         <form>
             <input type="text" placeholder="Name">
             <input type="email" placeholder="Email">
@@ -176,8 +186,10 @@
         </form>
     </section>
     
+    <!--Footer Section-->
     <footer>
         <p>&copy; 2023 RS Projects. All rights reserved.</p>
+        <p><script type="text/javascript">showDate();</script></p>
     </footer>
 </body>
 </html>
