@@ -108,6 +108,9 @@ nav{
     padding: 100px;
 }
 
+#home h1{
+}
+
 #logo{
     width: 150px;
     height: 150px;
@@ -118,7 +121,7 @@ nav{
 
 /* Services Section */
 #services{
-    padding: 50px;
+    padding: 80px;
 }
 
 .gridContainer p{
@@ -226,51 +229,101 @@ nav{
 }*/
 
 /* Contact Section */
-#contact{
-    padding: 50px;
+#contact {
+    padding: 80px;
 }
 
-#contact h2{
+#contact h2 {
+    padding-bottom: 40px;
+}
+
+#contact h4{
+    display: inline;
+}
+
+#contact li{
+    padding-bottom: 20px;
+}
+
+.follow{
+    padding-top: 20px;
+}
+
+#contact img{
+    border: 3px solid red;
+    border-radius: 30px;
+    padding: 10px;
+    margin-right: 10px;
+    fill: red;
+}
+
+.left{
+    text-align: left;
     float: left;
-    padding-bottom: 50px;
+}
+
+.right{
+    text-align: left;
 }
 
 #contact form {
     display: flex;
     flex-direction: column;
-    align-items: center;
     width: 50%;
     margin-right: 0px;
     margin-left: auto;
 }
 
+#contact form label {
+    text-align: left;
+    padding-bottom: 10px;
+    padding-top: 20px;
+}
+
+#contact form input[type="text"]{
+    width: 45%;
+    display: flex;
+}
+
+#contact form textarea{
+    width: 100%;
+    height: 200px;
+}
+
 #contact form input,
 #contact form textarea {
-    width: 500px;
+    width: 100%;
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
     border: 1px solid transparent;
-    box-shadow: 2px 2px 2px #6e6e6e;
-    background-color: #6e6e6e;
+    box-shadow: 5px 5px 5px #b5b5b5;
+    background-color: #c9c6c6;
+    color: var(--text-colour);
+    transition: width 0.4s ease-in-out;
+}
+
+#contact form input:focus,
+#contact form textarea:focus {
+    outline: none;
+    border: 1px solid transparent;
+    box-shadow: 5px 5px 5px #333;
 }
 
 #contact form button {
-    padding: 10px 20px;
+    padding: 10px;
+    margin-top: 10px;
     background-color: #333;
     color: #fff;
     border: none;
     border-radius: 5px;
+    width: 25%;
     cursor: pointer;
+    align-self: flex-end;
 }
 
 #contact form button:hover {
     background-color: #555;
-}
-
-aside{
-    float: left;
-    text-align: left;
 }
 
 /* Footer Section */

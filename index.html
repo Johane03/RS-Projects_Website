@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="styling.css">
     <script type="text/javascript" src="script.js"></script>
 </head>
-<body>
-
+<body>    
     <img src="images/RS-Logo_Background.png" alt="Logo Background" id="logoBackground">
 
     <!--Header Section-->
@@ -17,7 +16,7 @@
             <ul class="navList">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <!--li><a href="#projects">Projects</a></li-->
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -175,20 +174,45 @@
     
     <!--Contact Section-->
     <section id="contact">
-        <h2>
-            <span>Contact Us</span>
-        </h2>
-        <aside>
-            <form>
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="Email">
-                <textarea placeholder="Message"></textarea>
+        <div class="left">
+            <h2>
+                <span>Contact Us</span>
+            </h2>
+            <ul>
+                <li><h4>Email:</h4> info@rs-projectsza.co.za</li>
+                <li><h4>Phone:</h4></li>
+                <li><h4>Address:</h4></li>
+            </ul>
+            <div class="follow">
+                <a href="http://">
+                    <img src="icons/bxl-linkedin-square.svg" alt="LinkedIn" srcset="">
+                </a>
+                <a href="http://">
+                    <img src="icons/bxl-facebook.svg" alt="Facebook" srcset="">
+                </a>
+                <a href="http://">
+                    <img src="icons/bxl-twitter.svg" alt="Twitter" srcset="">
+                </a>
+            </div>
+        </div>
+        <div class="right">
+            <form action="">
+                <label for=""><h3>Name:</h3></label>
+                <input type="text" placeholder="First Name">
+                <input type="text" placeholder="Last Name" >
+
+                <label for=""><h3>Email:</h3></label>
+                <input type="email" placeholder="">
+
+                <label for=""><h3>Message:</h3></label>
+                <textarea placeholder=""></textarea>
+
                 <button type="submit">Send</button>
             </form>
-        </aside>
+        </div>
         
     </section>
-    
+
     <!--Footer Section-->
     <footer>
         <p>&copy; 2023 RS Projects. All rights reserved.</p>
