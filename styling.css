@@ -232,7 +232,7 @@ nav{
 
 #contact h2{
     float: left;
-    padding-bottom: 20px;
+    padding-bottom: 50px;
 }
 
 #contact form {
@@ -266,6 +266,11 @@ nav{
 
 #contact form button:hover {
     background-color: #555;
+}
+
+aside{
+    float: left;
+    text-align: left;
 }
 
 /* Footer Section */
