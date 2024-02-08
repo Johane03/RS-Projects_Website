@@ -1,17 +1,16 @@
 <?php
 // get the form data
-$name = $_POST['name'];
+$firstName = $_POST['firstName'];
+$lastName = $_POST['lastName'];
 $email = $_POST['email'];
-$phone = $_POST['phone'];
 $message = $_POST['message'];
 
 // set the email recipient, subject, and body
 $to = "lieliebokkie@gmail.com";
 $subject = "Website Inquiry";
 $body = "<h1>New Website Inquiry Info:</h1>
-<p>Name: $name</p>
+<p>Name: $firstName $lastName</p>
 <p>Email: $email</p>
-<p>Phone: $phone</p>
 <p>Message: $message</p>";
 
 // set the email headers

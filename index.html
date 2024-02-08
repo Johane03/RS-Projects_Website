@@ -20,7 +20,7 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <img src="images/RS_Logo.png" alt="Logo" id="logo">
+        <img src="images/RS_Logo-White.png" alt="Logo" id="logo">
     </header>
     
     <!--Home Section-->
@@ -196,16 +196,16 @@
             </div>
         </div>
         <div class="right">
-            <form method="post" action="mailto:lieliebokkie@gmail.com">
-                <label for=""><h3>Name:</h3></label>
-                <input type="text" placeholder="First Name">
-                <input type="text" placeholder="Last Name" >
+            <form method="POST" action="email.php">
+                <label for="firstName"><h3>Name:</h3></label>
+                <input type="text" name="firstName" placeholder="First Name">
+                <input type="text" name="lastName" placeholder="Last Name" >
 
-                <label for=""><h3>Email:</h3></label>
-                <input type="email" placeholder="">
+                <label for="email"><h3>Email:</h3></label>
+                <input type="email" name="email" placeholder="">
 
                 <label for=""><h3>Message:</h3></label>
-                <textarea placeholder=""></textarea>
+                <textarea name="message" placeholder=""></textarea>
 
                 <button type="submit">Send</button>
             </form>
