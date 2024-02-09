@@ -25,6 +25,10 @@ body{
     height: 100px;
 }
 
+body span{
+    border-bottom: 5px solid red;
+}
+
 section {
     padding: 50px;
     text-align: center;
@@ -33,10 +37,6 @@ section {
 h1 {
     font-size: 36px;
     margin-bottom: 20px;
-}
-
-span{
-    border-bottom: 5px solid red;
 }
 
 p {
@@ -249,6 +249,91 @@ nav{
     padding-top: 20px;
 }
 
+.follow .icon{
+    position: relative;
+    background-color: red;
+    border-radius: 50%;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 22px;
+    display: inline-block;
+    align-items: center;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    color: #000000;
+    text-decoration: none;
+}
+
+.follow .tooltip {
+    position: absolute;
+    top: 0;
+    line-height: 1.5;
+    font-size: 14px;
+    background-color: #ffffff;
+    color: #ffffff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.follow span{
+    border-bottom: 0px;
+    display: table;
+    margin: 0 auto;
+}
+
+.follow .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background-color: #ffffff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.follow .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.follow .icon:hover span,
+.follow .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.follow .linkedIn:hover,
+.follow .linkedIn:hover .tooltip,
+.follow .linkedIn:hover .tooltip::before {
+    background-color: #0e76a8;
+    color: #ffffff;
+}
+
+
+.follow .facebook:hover,
+.follow .facebook:hover .tooltip,
+.follow .facebook:hover .tooltip::before {
+    background-color: #3b5999;
+    color: #ffffff;
+}
+
+.follow .twitter:hover,
+.follow .twitter:hover .tooltip,
+.follow .twitter:hover .tooltip::before {
+    background-color: #46c1f6;
+    color: #ffffff;
+}
+
 #contact img{
     border: 3px solid red;
     border-radius: 30px;
@@ -260,47 +345,93 @@ nav{
 .left{
     text-align: left;
     float: left;
+    width: 50%;
 }
 
 .right{
     text-align: left;
+    float: right;
+    margin-right: 0px;
+    margin-left: auto;
+    margin-bottom: 100px;
+    width: 50%;
 }
 
 #contact form {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    margin-right: 0px;
-    margin-left: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: auto;
+    grid-gap: 10px;
+    padding-bottom: 50px;
 }
 
-#contact form label {
-    text-align: left;
-    padding-bottom: 10px;
-    padding-top: 20px;
+#contact form span{
+    color: red;
+    border-bottom: 0px;
 }
 
-#contact form input[type="text"]{
-    width: 45%;
-    display: flex;
+/* Grid items */
+.text{
+    grid-column: 1 / 5;
+    grid-row: 1;
+}
+
+.name1{
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.name2{
+    grid-column: 1 / 3;
+    grid-row: 3;
+}
+
+.name3{
+    grid-column: 3 / 5;
+    grid-row: 3;
+
+}
+
+.email1{
+    grid-column: 1 / 5;
+    grid-row: 4;
+}
+
+.email2{
+    grid-column: 1 / 5;
+    grid-row: 5;
+}
+
+.message1{
+    grid-column: 1 / 5;
+    grid-row: 6;
+
+}
+
+.message2{
+    grid-column: 1 / 5;
+    grid-row: 7;
+}
+
+.submitButton{
+    grid-column: 4;
+    grid-row: 8;
 }
 
 #contact form textarea{
-    width: 100%;
     height: 200px;
 }
 
 #contact form input,
 #contact form textarea {
-    width: 100%;
     padding: 10px;
-    margin-bottom: 10px;
     border-radius: 5px;
     border: 1px solid transparent;
     box-shadow: 5px 5px 5px #b5b5b5;
     background-color: #c9c6c6;
     color: var(--text-colour);
     transition: width 0.4s ease-in-out;
+    width: 100%;
 }
 
 #contact form input:focus,
@@ -320,6 +451,7 @@ nav{
     width: 25%;
     cursor: pointer;
     align-self: flex-end;
+    width: 100%;
 }
 
 #contact form button:hover {
@@ -331,7 +463,12 @@ footer {
     background-color: #333;
     color: #fff;
     padding: 20px;
+    margin-top: 20px;
     text-align: center;
+    width: 100%;
+    height: 50px;
+    bottom: 0;
+    position: fixed;
 }
 
 

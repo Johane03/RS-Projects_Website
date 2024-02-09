@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RS Projects</title>
     <link rel="stylesheet" href="styling.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css'>
     <script type="text/javascript" src="script.js"></script>
 </head>
 <body>    
@@ -184,30 +185,50 @@
                 <li><h4>Address:</h4></li>
             </ul>
             <div class="follow">
-                <a href="http://">
-                    <img src="icons/bxl-linkedin-square.svg" alt="LinkedIn" srcset="">
+                <a href="#" class="icon linkedIn">
+                    <div class="tooltip">LinkedIn</div>
+                    <span><i class="fab fa-linkedin"></i></span>
                 </a>
-                <a href="http://">
-                    <img src="icons/bxl-facebook.svg" alt="Facebook" srcset="">
+                <a href="#" class="icon facebook">
+                    <div class="tooltip">Facebook</div>
+                    <span><i class="fab fa-facebook-f"></i></span>
                 </a>
-                <a href="http://">
-                    <img src="icons/bxl-twitter.svg" alt="Twitter" srcset="">
-                </a>
+                <a href="#" class="icon twitter">
+                    <div class="tooltip">Twitter</div>
+                    <span><i class="fab fa-twitter"></i></span>
+                  </a>
             </div>
         </div>
         <div class="right">
             <form method="POST" action="email.php">
-                <label for="firstName"><h3>Name:</h3></label>
-                <input type="text" name="firstName" placeholder="First Name">
-                <input type="text" name="lastName" placeholder="Last Name" >
+                <div class="text">
+                    <p>Fields marked with <span>*</span> are required.</p>
+                </div>
+                <div class="name1">
+                    <label for="firstName"><h3>Name:<span>*</span></h3></label>
+                </div>
+                <div class="name2">
+                    <input type="text" name="firstName" placeholder="First Name" required>
+                </div>
+                <div class="name3">
+                    <input type="text" name="lastName" placeholder="Last Name" required>
+                </div>
+                <div class="email1">
+                    <label for="email"><h3>Email:<span>*</span></h3></label>
+                </div>
+                <div class="email2">
+                    <input type="email" name="email" placeholder="" required>
+                </div>
+                <div class="message1">
+                    <label for=""><h3>Message:<span>*</span></h3></label>
+                </div>
+                <div class="message2">
+                    <textarea name="message" placeholder="" required></textarea>
+                </div>
+                <div class="submitButton">
+                    <button type="submit">Send</button>
+                </div>
 
-                <label for="email"><h3>Email:</h3></label>
-                <input type="email" name="email" placeholder="">
-
-                <label for=""><h3>Message:</h3></label>
-                <textarea name="message" placeholder=""></textarea>
-
-                <button type="submit">Send</button>
             </form>
         </div>
         
@@ -216,7 +237,7 @@
     <!--Footer Section-->
     <footer>
         <p>&copy; 2023 RS Projects. All rights reserved.</p>
-        <p><script type="text/javascript">showDate();</script></p>
+        <!--p><script type="text/javascript">showDate();</script></p-->
     </footer>
 </body>
 </html>
