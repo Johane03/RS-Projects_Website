@@ -238,7 +238,7 @@ nav{
 }
 
 #contact h4{
-    display: inline;
+    padding-bottom: 10px;
 }
 
 #contact li{
