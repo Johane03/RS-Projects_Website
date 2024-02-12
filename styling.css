@@ -108,9 +108,6 @@ nav{
     padding: 100px;
 }
 
-#home h1{
-}
-
 #logo{
     width: 150px;
     height: 150px;
@@ -231,14 +228,19 @@ nav{
 /* Contact Section */
 #contact {
     padding: 80px;
+    padding-top: 50px;
 }
 
 #contact h2 {
-    padding-bottom: 40px;
+    padding-bottom: 20px;
 }
 
 #contact h3{
     padding-bottom: 10px;
+}
+
+#contact p{
+    margin-bottom: 10px;
 }
 
 #contact li{
@@ -353,7 +355,6 @@ nav{
     float: right;
     margin-right: 0px;
     margin-left: auto;
-    margin-bottom: 100px;
     width: 50%;
 }
 
@@ -413,6 +414,11 @@ nav{
     grid-row: 7;
 }
 
+.clearButton{
+    grid-column: 1;
+    grid-row: 8;
+}
+
 .submitButton{
     grid-column: 4;
     grid-row: 8;
@@ -432,6 +438,7 @@ nav{
     color: var(--text-colour);
     transition: width 0.4s ease-in-out;
     width: 100%;
+    margin-bottom: 20px;
 }
 
 #contact form input:focus,
@@ -443,12 +450,11 @@ nav{
 
 #contact form button {
     padding: 10px;
-    margin-top: 10px;
     background-color: #333;
+    margin-bottom: 35px;
     color: #fff;
     border: none;
     border-radius: 5px;
-    width: 25%;
     cursor: pointer;
     align-self: flex-end;
     width: 100%;
@@ -462,14 +468,35 @@ nav{
 footer {
     background-color: #333;
     color: #fff;
-    padding: 20px;
-    margin-top: 20px;
+    padding: 10px;
     text-align: center;
     width: 100%;
-    height: 50px;
+    height: auto;
     bottom: 0;
-    position: fixed;
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
 
+.back-to-top {
+    padding: 5px 8px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    position: relative; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease;
+}
+
+.back-to-top:hover {
+    background-color: #555;
+    transform: translate(-50%, -100%);
+}
 
 
